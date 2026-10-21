@@ -30,6 +30,8 @@ public class Cliente {
     @Column
     private String estadoCivil;
 
+    Cliente() {}
+
     public Cliente(String nome, String cpf, LocalDate dataNascimento, String sexo, String estadoCivil) {
         this.nome = nome;
         this.cpf = cpf;

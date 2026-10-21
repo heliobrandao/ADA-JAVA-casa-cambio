@@ -25,10 +25,10 @@ public record ClienteRequest(
         @Past(message = "A data de nascimento deve ser anterior a hoje")
         LocalDate dataNascimento,
 
-        @Size(max = 255, message = "O sexo deve ter no maximo 255 caracteres")
+        @Size(min = 1, max = 255, message = "O sexo deve ter entre 1 e 255 caracteres")
         String sexo,
 
-        @Size(max = 255, message = "O estado civil deve ter no maximo 255 caracteres")
+        @Size(min = 1, max = 255, message = "O estado civil deve ter entre 1 e 255 caracteres")
         String estadoCivil
 ) {
 
